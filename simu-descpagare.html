@@ -31,7 +31,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #ebe3e3;
+            background-color: black;
             /* color: #e0e0e0;*/
             font-family: "Roboto", Arial, sans-serif;
             font-weight: 500;
@@ -312,7 +312,7 @@
             </div>
             <div class="form-group">
                 <label for="tnr">TNA (tasa de mercado)</label>
-                <input type="number" id="tnr" step="0.01" placeholder="Ingrese la tasa informada por la SGR" required>
+                <input type="text" id="tnr" step="0.01" placeholder="Ingrese la tasa informada por la SGR" min="-100"  required>
             </div>
             <div class="form-group">
                 <label for="tcambio">Tipo de Cambio</label>
