@@ -16,7 +16,9 @@
     main {
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
+        height: 70vh;
     }
 
     body {
@@ -38,9 +40,7 @@
          height: 100vh;
     }
 
-    header {
-        max-width: 600px;
-    }
+  
 
 
     .logo-container {
@@ -78,14 +78,18 @@
         font-size: 16px;
     }
 
-.simu-selector{
-    padding-top: 20px;
-    text-align: center;
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 400px;
 }
 
     .btn{
         display: inline-block;
-        min-width: 150px;
+      width: 140px;
+      font-size: 16px;
         text-decoration: none;
         color: white;
         padding: 20px 10px;
@@ -141,9 +145,7 @@
             display: none;
         }
 
-        main {
-            flex-direction: row;
-        }
+       
 
         #refreshButton {
             bottom: -5px;
@@ -157,7 +159,9 @@
 </style>
 
 <body>
-    <header>
+    
+    <main>
+        
         <div class="logo-container">
             <a href="https://avalfertil.com.ar/" target="_blank">
                 <img src="https://avalfertil.com.ar/wp-content/uploads/2016/11/LOGOS-02-1.png" alt=""
@@ -166,19 +170,19 @@
                 <img src="https://www.mav-sa.com.ar/fileadmin/templates/img/main-logo.png" alt="" id="mav-logo">
             </a> -->
         </div>
-        <h1>AVAL FÉRTIL SOCIEDAD DE GARANTÍA RECÍPROCA </h1>
+        <h1>AVAL FÉRTIL <br>SOCIEDAD DE GARANTÍA RECÍPROCA </h1>
         <h2>Simuladores para el descuento de cheques y pagarés dollar linked avalados, en el Mercado Argentino de Valores        </h2>
-    </header>
+  
 
-    <section class="simu-selector">
+   
 
         <div class="btn-container">
             <a href="simu-desccpd.html" class="btn btn-chq">CHEQUES</a>
             <a href="simu-descpagare.html" class="btn btn-pag">PAGARÉS USD</a>
         </div>
 
-    </section>
-
+  
+    </main>
 
    
 </body>
