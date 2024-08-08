@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simuladores Aval Fértil SGR</title>
+</head>
+<style>
+     * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+    main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    body {
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ebe3e3;
+        color: #e0e0e0;
+        font-family: "Roboto", Arial, sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        background-image: url(assets/pexels-pixabay-158827.jpg);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+    /*     backdrop-filter: blur(5px); */
+         height: 100vh;
+    }
+
+    header {
+        max-width: 600px;
+    }
+
+
+    .logo-container {
+        margin: 30px auto 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+
+    #avfe-logo {
+        width: 200px;
+        filter: drop-shadow(1px 1px 5px rgba(255, 255, 255, 0.824));
+    }
+
+/*     #mav-logo {
+        width: 150px;
+        height: 25px;
+     
+    } */
+
+    h1,
+    h2 {
+        color: #232229;
+        margin: 10px 0;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    h1{
+        margin-top: 30px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+.simu-selector{
+    padding-top: 20px;
+    text-align: center;
+}
+
+    .btn{
+        display: inline-block;
+        min-width: 150px;
+        text-decoration: none;
+        color: white;
+        padding: 20px 10px;
+        margin:20px 10px; 
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.331);
+        text-align: center;
+    }
+
+    .btn-chq{
+        background-color: #2849a4;
+    }
+
+    .btn-chq:hover{
+        background-color: #193071;
+    }
+
+    .btn-pag{
+        background-color: #1e7739;
+    }
+
+    .btn-pag:hover{
+        background-color: #145126;
+    }
+
+    footer{
+        color: white;
+        text-shadow: 1px 1px 1px black;
+        max-width: 800px;
+        text-align: center;
+    }
+
+    footer a {
+            color: #004080;
+            text-decoration: none;
+        }
+
+    /* ESTILOS PARA VIEWPORTS GRANDES*/
+
+    @media screen and (min-width:768px) {
+
+        body{
+            height: 100vh;
+        }
+
+        #avfe-logo,
+        #mav-logo {
+            scale: 1.4;
+            margin: 20px;
+        }
+
+        #form-container-result {
+            display: none;
+        }
+
+        main {
+            flex-direction: row;
+        }
+
+        #refreshButton {
+            bottom: -5px;
+        }
+
+        footer{
+            padding: 40px 0;
+        }
+
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="https://avalfertil.com.ar/" target="_blank">
+                <img src="https://avalfertil.com.ar/wp-content/uploads/2016/11/LOGOS-02-1.png" alt=""
+                    id="avfe-logo"></a>
+         <!--    <a href="https://www.mav-sa.com.ar/" target="_blank">
+                <img src="https://www.mav-sa.com.ar/fileadmin/templates/img/main-logo.png" alt="" id="mav-logo">
+            </a> -->
+        </div>
+        <h1>AVAL FÉRTIL SOCIEDAD DE GARANTÍA RECÍPROCA </h1>
+        <h2>Simuladores para el descuento de cheques y pagarés dollar linked avalados, en el Mercado Argentino de Valores        </h2>
+    </header>
+
+    <section class="simu-selector">
+
+        <div class="btn-container">
+            <a href="simu-desccpd.html" class="btn btn-chq">CHEQUES</a>
+            <a href="simu-descpagare.html" class="btn btn-pag">PAGARÉS USD</a>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>  Simuladores con fines comerciales y montos aproximados.  No implican obligación contractual. </p>
+
+
+        <br>
+    </footer>
+
+</body>
+
+</html>
