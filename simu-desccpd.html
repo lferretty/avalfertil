@@ -38,7 +38,7 @@
             font-size: 16px;
             background-image: url(assets/pexels-pixabay-158827.jpg);
             background-position: bottom;
-         /*    background-attachment: fixed    ;  anda raro en versión mobile */
+            background-attachment: fixed    ;  
             background-size: cover;
             background-repeat: no-repeat;
             /*     backdrop-filter: blur(5px); */
@@ -225,10 +225,11 @@
             color: rgb(114, 175, 223);
         }
 
-
-        .texto-neto{
-            margin-top: 20px;
+        .texto-neto {
+            margin: 20px 0;
             font-size: 12px;
+            color: white;
+            display: none;
         }
 
         /* ESTILOS PARA VIEWPORTS GRANDES*/
@@ -324,7 +325,7 @@
         </div>
         <div class="form-container" id="form-container-result">
             <div class="result" id="result"></div>
-            <div class="texto-neto">El "neto liquidado" incluye todos los gastos.</div>
+            <div class="texto-neto" id="texto-neto">El "neto liquidado" incluye todos los gastos.</div>
             <!--  <button class="btn" id="refreshButton">Borrar</button> -->
         </div>
 
@@ -400,10 +401,8 @@
             containerResult.style.height = "auto";
             containerResult.style.display = "block";
 
-            //muestra el botón borrar
-            /*  const botonBorrar = document.getElementById("refreshButton");
-             botonBorrar.style.display = "block";
-             botonBorrar.style.color = "white"; */
+            const textoNeto = document.getElementById("texto-neto");
+            textoNeto.style.display = "block"; 
 
             // Calcular descuento
             const discount = parseFloat(amount - (amount / (1 + (tna / 100 * ((daysToExpiry + 2) / 365))))).toFixed(0);
