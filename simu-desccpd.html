@@ -21,6 +21,7 @@
 
         body{
             margin: 0;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -29,6 +30,7 @@
             font-family: "Roboto", Arial, sans-serif;
             font-weight: 500;
             font-size: 16px;
+           
         }
 
         main {
@@ -38,12 +40,12 @@
         }
 
         .wallpaper {
-            position: absolute;
+            position: fixed;
             z-index:0;
-
+          
             background-image: url(assets/pexels-pixabay-158827.jpg);
             background-position: bottom;
-            background-attachment: fixed    ;  
+       /*      background-attachment: fixed    ;   */
             background-size: cover;
             background-repeat: no-repeat;
             /*     backdrop-filter: blur(5px); */
@@ -54,6 +56,7 @@
 
         header {
             max-width: 600px;
+            margin-top: 25px;
         }
 
 
@@ -190,7 +193,6 @@
             text-align: center;
             font-size: 80%;
             padding: 20px 0;
-
         }
 
         footer p a {
