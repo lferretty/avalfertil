@@ -19,7 +19,7 @@
             padding: 0;
         }
 
-        body{
+        .body-container {
             margin: 0;
             height: 100vh;
             display: flex;
@@ -42,16 +42,14 @@
         .wallpaper {
             position: fixed;
             z-index:0;
-          
             background-image: url(assets/pexels-pixabay-158827.jpg);
             background-position: bottom;
        /*      background-attachment: fixed    ;   */
             background-size: cover;
             background-repeat: no-repeat;
             /*     backdrop-filter: blur(5px); */
-         width: 100%;
-        
-            height: 100dvh;
+            width: 100%;
+            height: 100%;
         }
 
 
@@ -305,6 +303,7 @@
 
 <body>
 
+   <div class="body-container">
     <div class="wallpaper"></div>
 
     <header>
@@ -358,6 +357,7 @@
     </footer>
 
     <a href="index.html" id="home-link">HOME</a>
+   </div>
 
     <script>
         function formatNumber(number) {
