@@ -19,6 +19,11 @@
             padding: 0;
         }
 
+        body{
+            overflow: hidden; /* Evita el scroll en el body */
+
+        }
+
         .body-container {
             margin: 0;
             height: 100vh;
@@ -31,6 +36,8 @@
             font-weight: 500;
             font-size: 16px;
            
+            position: relative;
+            overflow-y: scroll; /* Permite el scroll en el contenido */
         }
 
         main {
@@ -40,16 +47,20 @@
         }
 
         .wallpaper {
-            position: fixed;
-            z-index:0;
+     
             background-image: url(assets/pexels-pixabay-158827.jpg);
             background-position: bottom;
-       /*      background-attachment: fixed    ;   */
             background-size: cover;
             background-repeat: no-repeat;
-            /*     backdrop-filter: blur(5px); */
+            
+            position: fixed; /* Fija el fondo */
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
+            background-size: cover;
+            background-attachment: fixed; /* Esto asegura que la imagen de fondo esté fija */
+            z-index: -1; /* Coloca el fondo detrás del contenido */
         }
 
 
