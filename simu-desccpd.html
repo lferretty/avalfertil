@@ -19,30 +19,36 @@
             padding: 0;
         }
 
+        body{
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           /*  background-color: black; */
+            color: #e0e0e0;
+            font-family: "Roboto", Arial, sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
         main {
             display: flex;
             justify-content: center;
             flex-direction: column;
         }
 
-        body {
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: black;
-            color: #e0e0e0;
-            font-family: "Roboto", Arial, sans-serif;
-            font-weight: 500;
-            font-size: 16px;
+        .wallpaper {
+            position: absolute;
+            z-index:0;
+
             background-image: url(assets/pexels-pixabay-158827.jpg);
             background-position: bottom;
             background-attachment: fixed    ;  
             background-size: cover;
             background-repeat: no-repeat;
             /*     backdrop-filter: blur(5px); */
-            height: 100svh;
+            width: 100%;
+            height: 100%;
         }
 
 
@@ -295,6 +301,9 @@
 </head>
 
 <body>
+
+    <div class="wallpaper"></div>
+
     <header>
         <div class="logo-container">
             <a href="https://avalfertil.com.ar/" target="_blank">
