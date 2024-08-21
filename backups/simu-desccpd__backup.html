@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Cheques (simulador)</title>
+    <style>
+        /* styles.css */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ebebeb;
+            color: #e0e0e0;
+            font-family: "Roboto", Arial, sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+
+
+        header {
+            max-width: 600px;
+            margin-top: 30px;
+        }
+
+
+        .logo-container {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .logo-container img {
+            filter: drop-shadow(1px 1px 2px rgba(255, 255, 255, 0.824));
+        }
+
+        #avfe-logo {
+            width: 100px;
+            height: 50px;
+
+        }
+
+        #mav-logo {
+            width: 150px;
+            height: 25px;
+        }
+
+        h1 {
+            color: black;
+            margin: 10px 0;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .form-container {
+            background: #333333;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            text-align: center;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        #form-container-result {
+            padding: 0 20px;
+            height: 0;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #00aaff;
+            /* Azul claro */
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            background: #444444;
+            /* Gris oscuro */
+            border: 1px solid #555555;
+            color: #e0e0e0;
+            text-align: center;
+        }
+
+
+        input::placeholder {
+            color: #eee;
+        }
+
+        .result {
+            margin-top: 20px;
+
+            text-align: center;
+        }
+
+        .result div {
+            margin-bottom: 10px;
+            /* Espaciado entre líneas */
+        }
+
+
+
+        .net-amount {
+            color: #ffffff;
+            background-color: #8b0000;
+            padding: 10px 0;
+        }
+
+        .chqamount,
+        .comision,
+        .arancel,
+        .discount {
+            color: #92b0d4;
+        }
+
+        .cft-anual,
+        .cft {
+            color: #b3e5fc;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            background-color: #0059b3;
+            /* Azul oscuro */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0a085f;
+        }
+
+        footer {
+            width: 90%;
+            height: 100px;
+            max-width: 800px;
+            color: black;
+            text-align: center;
+            font-size: 80%;
+            padding: 20px 0;
+        }
+
+        footer p a {
+            color: #363ca1;
+            text-decoration: none;
+        }
+
+        footer p {
+            margin-bottom: 20px;
+        }
+
+        .btn-pag {
+            margin-top: 30px;
+            background-color: rgb(0, 156, 0);
+        }
+
+        .btn-pag:hover {
+            background-color: #1c6207;
+        }
+
+        #refreshButton {
+            display: none;
+            margin: 10px auto;
+            position: relative;
+            color: white;
+        }
+
+        #home-link {
+            color: darkblue;
+            text-decoration: none;
+            margin: 20px auto;
+            padding: 2px;
+            text-align: center;
+            display: block;
+            font-size: .8em;
+        }
+
+        #home-link:hover {
+            color: rgb(114, 175, 223);
+        }
+
+        .texto-neto {
+            margin: 20px 0;
+            font-size: 12px;
+            color: white;
+            display: none;
+        }
+
+        /* ESTILOS PARA VIEWPORTS GRANDES*/
+
+        @media screen and (min-width:768px) {
+
+            .wallpaper {
+
+                background-image: url(assets/pexels-pixabay-158827.jpg);
+                background-position: bottom;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                position: fixed;
+                /* Fija el fondo */
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-attachment: fixed;
+                /* Esto asegura que la imagen de fondo esté fija */
+                z-index: -1;
+                /* Coloca el fondo detrás del contenido */
+            }
+
+
+            #avfe-logo,
+            #mav-logo {
+                scale: 1.4;
+                margin: 20px;
+            }
+
+            #form-container-result {
+                display: none;
+            }
+
+            main {
+                flex-direction: row;
+            }
+
+            #refreshButton {
+                bottom: -5px;
+            }
+
+
+            .logo-container {
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 600px;
+            }
+
+            footer{
+                color: white;
+            }
+
+            footer p a {
+                color: lightskyblue;
+            }
+
+
+            #home-link {
+                color: wheat;
+            }
+
+        }
+
+        /* ESTILOS PARA IMPRESIÓN  */
+
+        @media print {
+
+            body {
+                background-color: white;
+            }
+
+            .btn {
+                display: none;
+
+            }
+
+            .form-group label,
+            .net-amount,
+            input::placeholder {
+                color: black;
+            }
+
+            #home-link {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="wallpaper"></div>
+
+    <header>
+        <div class="logo-container">
+            <a href="https://avalfertil.com.ar/" target="_blank">
+                <img src="https://avalfertil.com.ar/wp-content/uploads/2016/11/LOGOS-02-1.png" alt=""
+                    id="avfe-logo"></a>
+            <a href="https://www.mav-sa.com.ar/" target="_blank">
+                <img src="https://www.mav-sa.com.ar/fileadmin/templates/img/main-logo.png" alt="" id="mav-logo">
+            </a>
+        </div>
+        <h1>Simulador descuento de cheques </h1>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="amount">Monto del Cheque</label>
+                <input type="number" id="amount" placeholder="Ingrese el monto a descontar" required>
+            </div>
+            <div class="form-group">
+                <label for="expiry-date">Fecha de Vencimiento</label>
+                <input type="date" id="expiry-date" required>
+            </div>
+            <div class="form-group">
+                <label for="tnr">TNA (tasa de mercado)</label>
+                <input type="number" id="tnr" step="0.01" placeholder="Ingrese la tasa informada por la SGR" required>
+            </div>
+            <button class="btn" onclick="calculateDiscount()">Calcular</button>
+        </div>
+        <div class="form-container" id="form-container-result">
+            <div class="result" id="result"></div>
+            <div class="texto-neto" id="texto-neto">El "neto liquidado" incluye todos los gastos.</div>
+            <!--  <button class="btn" id="refreshButton">Borrar</button> -->
+        </div>
+
+    </main>
+    <footer>
+
+
+        <p> <a href="https://avalfertil.com.ar/" target="_blank">Aval Fértil SGR</a>. Simulador con fines comerciales,
+            no implica obligación contractual. <a href="mailto:info@avalfertil.com.ar"
+                target="_blank">info@avalfertil.com.ar</a></p>
+
+
+        <a href="simu-descpagare.html" class="btn btn-pag">Ir al Simulador de Pagarés</a>
+        <br>
+
+
+
+    </footer>
+
+    <a href="index.html" id="home-link">HOME</a>
+
+
+    <script>
+        function formatNumber(number) {
+            // Convierte el número a string y utiliza una expresión regular para agregar separadores de miles
+            return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+
+        function calculateDiscount() {
+
+            const amount = parseFloat(document.getElementById('amount').value);
+            const expiryDate = new Date(document.getElementById('expiry-date').value);
+            const tna = parseFloat(document.getElementById('tnr').value);
+
+            // Arancel ALYC y Comisión SGR fijos
+            const arancelAlycPercent = 1.20 / 100;
+            const comisionSGRPercent = 3.25 / 100;
+
+            // Verificaciones
+            if (isNaN(amount) || isNaN(tna) || !expiryDate.getTime()) {
+                alert('Por favor, complete todos los campos correctamente.');
+                return;
+            }
+
+            if (tna > 99) {
+                alert('La tasa TNA no puede ser mayor al 99%.');
+                return;
+            }
+
+            const today = new Date();
+            const maxExpiryDate = new Date(today);
+            maxExpiryDate.setDate(today.getDate() + 360);
+
+            if (expiryDate > maxExpiryDate) {
+                alert('La fecha de vencimiento no puede exceder los 360 días a partir de hoy.');
+                return;
+            }
+
+            const timeDiff = expiryDate - today;
+            let daysToExpiry = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) + 2; // Sumar 2 días
+
+            if (daysToExpiry > 360) {
+                daysToExpiry = 360;
+            }
+
+            if (daysToExpiry <= 0) {
+                alert('La fecha de vencimiento debe ser en el futuro.');
+                return;
+            }
+
+            //ampliar el contenedor .form-container-result para poder mostrar el resultado
+            const containerResult = document.getElementById("form-container-result");
+            containerResult.style.height = "auto";
+            containerResult.style.display = "block";
+
+            const textoNeto = document.getElementById("texto-neto");
+            textoNeto.style.display = "block";
+
+            // Calcular descuento
+            const discount = parseFloat(amount - (amount / (1 + (tna / 100 * ((daysToExpiry + 2) / 365))))).toFixed(0);
+            const amountAfterDiscount = parseFloat(amount - discount).toFixed(0);
+
+            // Calcular monto ponderado en el plazo
+            const adjustedAmount = (amount / (1 + (tna / 100 * (daysToExpiry / 365)))).toFixed(0);
+
+            // Calcular arancel ALYC con IVA
+            const arancelAmount = ((1.15 / 100 / 365) * (daysToExpiry) * amount * 1.21).toFixed(0);
+
+            // Calcular comisión SGR
+            const comisionAmount = ((amount * daysToExpiry * comisionSGRPercent) / 365).toFixed(0);
+
+            // Calcular monto neto después de aplicar el descuento, arancel y comisión
+            const netAmount = (amountAfterDiscount - parseFloat(arancelAmount) - parseFloat(comisionAmount)).toFixed(0);
+
+
+            // Calcular Costo Financiero Total (CFT)
+            const cft = (((amount - netAmount) / netAmount) * 100).toFixed(2);
+
+            // Calcular CFT Anualizado
+            const cftAnual = ((cft / daysToExpiry) * 365).toFixed(2);
+
+
+
+            document.getElementById('result').innerHTML = `
+                <div class="net-amount">Neto liquidado: $${formatNumber(netAmount)}</div>
+ 	        	<div class="chqamount">Monto del cheque: $${formatNumber(amount)}</div>              
+                <div class="discount">Descuento (tasa): $${formatNumber(discount)}</div>
+                <div class="arancel">Aranceles del mercado: $${formatNumber(arancelAmount)}</div>
+                <div class="comision">Comisión SGR: $${formatNumber(comisionAmount)}</div>
+                <div class="cft">CFT: ${cft}%</div>
+                <div class="cft-anual">CFT (anual): ${cftAnual}%</div>
+            `;
+        }
+
+        /*  document.getElementById('refreshButton').addEventListener('click', function () {
+             location.reload();
+         }); */
+    </script>
+</body>
+
+</html>

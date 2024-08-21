@@ -1,0 +1,4 @@
+son backups previos a:
+
+JAVASCRIPT OFUSCATED : https://obfuscator.io/#code    (para codificar el js)
+AGREGADO DE FAVICON de calculadora
