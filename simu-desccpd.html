@@ -12,8 +12,6 @@
     <title>Cheques (simulador)</title>
     <link rel="shortcut icon" href="assets/calculator-fill.svg" type="image/x-icon">
     <style>
-        /* styles.css */
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -102,7 +100,6 @@
             display: block;
             margin-bottom: 5px;
             color: #00aaff;
-            /* Azul claro */
         }
 
         .form-group input {
@@ -110,7 +107,6 @@
             padding: 8px;
             box-sizing: border-box;
             background: #444444;
-            /* Gris oscuro */
             border: 1px solid #555555;
             color: #e0e0e0;
             text-align: center;
@@ -123,13 +119,11 @@
 
         .result {
             margin-top: 20px;
-
             text-align: center;
         }
 
         .result div {
             margin-bottom: 10px;
-            /* Espaciado entre líneas */
         }
 
 
@@ -155,7 +149,6 @@
         .btn {
             padding: 10px 15px;
             background-color: #0059b3;
-            /* Azul oscuro */
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -163,6 +156,7 @@
             font-size: 16px;
             margin-top: 10px;
             position: relative;
+            width: 75%;
         }
 
         a {
@@ -239,18 +233,14 @@
                 background-position: bottom;
                 background-size: cover;
                 background-repeat: no-repeat;
-
                 position: fixed;
-                /* Fija el fondo */
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
                 background-size: cover;
                 background-attachment: fixed;
-                /* Esto asegura que la imagen de fondo esté fija */
                 z-index: -1;
-                /* Coloca el fondo detrás del contenido */
             }
 
 
@@ -281,7 +271,7 @@
                 width: 600px;
             }
 
-            footer{
+            footer {
                 color: white;
             }
 
@@ -291,7 +281,8 @@
 
 
             #home-link {
-                color: wheat;
+                color: lightblue;
+
             }
 
         }
@@ -359,7 +350,7 @@
         <div class="form-container" id="form-container-result">
             <div class="result" id="result"></div>
             <div class="texto-neto" id="texto-neto">El "neto liquidado" incluye todos los gastos.</div>
-            <!--  <button class="btn" id="refreshButton">Borrar</button> -->
+            <!--  <button class="btn" id="refreshButton">Borrar</button> al final no lo usé , lo dejo por las dudas-->
         </div>
 
     </main>
@@ -382,7 +373,7 @@
 
 
     <script>
-      (function(_0x4a76c4,_0x1b8bf2){const _0x236c86=_0x9ada,_0x231d51=_0x4a76c4();while(!![]){try{const _0xb4d5bc=parseInt(_0x236c86(0xc0))/0x1*(parseInt(_0x236c86(0xcb))/0x2)+parseInt(_0x236c86(0xda))/0x3*(-parseInt(_0x236c86(0xce))/0x4)+-parseInt(_0x236c86(0xd2))/0x5*(-parseInt(_0x236c86(0xd8))/0x6)+-parseInt(_0x236c86(0xc4))/0x7*(parseInt(_0x236c86(0xbe))/0x8)+parseInt(_0x236c86(0xdd))/0x9*(parseInt(_0x236c86(0xdc))/0xa)+parseInt(_0x236c86(0xcf))/0xb*(parseInt(_0x236c86(0xbc))/0xc)+-parseInt(_0x236c86(0xcc))/0xd*(parseInt(_0x236c86(0xd4))/0xe);if(_0xb4d5bc===_0x1b8bf2)break;else _0x231d51['push'](_0x231d51['shift']());}catch(_0x1e1dfd){_0x231d51['push'](_0x231d51['shift']());}}}(_0x56fc,0x58427));function formatNumber(_0x356872){const _0x362019=_0x9ada;return _0x356872['toString']()[_0x362019(0xc8)](/\B(?=(\d{3})+(?!\d))/g,'.');}function _0x56fc(){const _0xf48992=['amount','La\x20fecha\x20de\x20vencimiento\x20no\x20puede\x20exceder\x20los\x20360\x20días\x20a\x20partir\x20de\x20hoy.','2855208wsHDHZ','</div>\x0a\x20\x09\x20\x20\x20\x20\x20\x20\x20\x20\x09<div\x20class=\x22chqamount\x22>Monto\x20del\x20cheque:\x20$','1354424CTWkDh','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22comision\x22>Comisión\x20SGR:\x20$','60254UfLUqq','%</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','texto-neto','getDate','14wVyhbZ','La\x20tasa\x20TNA\x20no\x20puede\x20ser\x20mayor\x20al\x2099%.','height','setDate','replace','result','style','18fECksL','91nXfYiR','display','164ZizCvO','11vjdVgv','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22net-amount\x22>Neto\x20liquidado:\x20$','getElementById','25UUROOB','innerHTML','1463182wdtYsI','block','toFixed','%</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cft-anual\x22>CFT\x20(anual):\x20','589884XjnEVg','value','14883IbtQZB','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22arancel\x22>Aranceles\x20del\x20mercado:\x20$','330290pIXmnR','99hkLjXY','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cft\x22>CFT:\x20','form-container-result'];_0x56fc=function(){return _0xf48992;};return _0x56fc();}function _0x9ada(_0x1d20c3,_0x150598){const _0x56fcb9=_0x56fc();return _0x9ada=function(_0x9ada0d,_0x36d794){_0x9ada0d=_0x9ada0d-0xbc;let _0x453fe6=_0x56fcb9[_0x9ada0d];return _0x453fe6;},_0x9ada(_0x1d20c3,_0x150598);}function calculateDiscount(){const _0x553b59=_0x9ada,_0x4575fd=parseFloat(document[_0x553b59(0xd1)](_0x553b59(0xe0))[_0x553b59(0xd9)]),_0x3aa17d=new Date(document[_0x553b59(0xd1)]('expiry-date')[_0x553b59(0xd9)]),_0x42a529=parseFloat(document[_0x553b59(0xd1)]('tnr')['value']),_0x46688d=1.2/0x64,_0x7c5805=3.25/0x64;if(isNaN(_0x4575fd)||isNaN(_0x42a529)||!_0x3aa17d['getTime']()){alert('Por\x20favor,\x20complete\x20todos\x20los\x20campos\x20correctamente.');return;}if(_0x42a529>0x63){alert(_0x553b59(0xc5));return;}const _0xd813be=new Date(),_0x466205=new Date(_0xd813be);_0x466205[_0x553b59(0xc7)](_0xd813be[_0x553b59(0xc3)]()+0x168);if(_0x3aa17d>_0x466205){alert(_0x553b59(0xe1));return;}const _0x265975=_0x3aa17d-_0xd813be;let _0x3e3aa4=Math['ceil'](_0x265975/(0x3e8*0x3c*0x3c*0x18))+0x2;_0x3e3aa4>0x168&&(_0x3e3aa4=0x168);if(_0x3e3aa4<=0x0){alert('La\x20fecha\x20de\x20vencimiento\x20debe\x20ser\x20en\x20el\x20futuro.');return;}const _0x5214f1=document[_0x553b59(0xd1)](_0x553b59(0xdf));_0x5214f1[_0x553b59(0xca)][_0x553b59(0xc6)]='auto',_0x5214f1[_0x553b59(0xca)]['display']='block';const _0x5d88a6=document['getElementById'](_0x553b59(0xc2));_0x5d88a6[_0x553b59(0xca)][_0x553b59(0xcd)]=_0x553b59(0xd5);const _0xc03bc=parseFloat(_0x4575fd-_0x4575fd/(0x1+_0x42a529/0x64*((_0x3e3aa4+0x2)/0x16d)))[_0x553b59(0xd6)](0x0),_0x1c7585=parseFloat(_0x4575fd-_0xc03bc)[_0x553b59(0xd6)](0x0),_0x3bd741=(_0x4575fd/(0x1+_0x42a529/0x64*(_0x3e3aa4/0x16d)))['toFixed'](0x0),_0x1b6497=(1.15/0x64/0x16d*_0x3e3aa4*_0x4575fd*1.21)['toFixed'](0x0),_0x3ec570=(_0x4575fd*_0x3e3aa4*_0x7c5805/0x16d)[_0x553b59(0xd6)](0x0),_0x35227e=(_0x1c7585-parseFloat(_0x1b6497)-parseFloat(_0x3ec570))['toFixed'](0x0),_0x24c284=((_0x4575fd-_0x35227e)/_0x35227e*0x64)[_0x553b59(0xd6)](0x2),_0x53f3a9=(_0x24c284/_0x3e3aa4*0x16d)[_0x553b59(0xd6)](0x2);document['getElementById'](_0x553b59(0xc9))[_0x553b59(0xd3)]=_0x553b59(0xd0)+formatNumber(_0x35227e)+_0x553b59(0xbd)+formatNumber(_0x4575fd)+'</div>\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22discount\x22>Descuento\x20(tasa):\x20$'+formatNumber(_0xc03bc)+_0x553b59(0xdb)+formatNumber(_0x1b6497)+_0x553b59(0xbf)+formatNumber(_0x3ec570)+_0x553b59(0xde)+_0x24c284+_0x553b59(0xd7)+_0x53f3a9+_0x553b59(0xc1);}
+        (function (_0x4a76c4, _0x1b8bf2) { const _0x236c86 = _0x9ada, _0x231d51 = _0x4a76c4(); while (!![]) { try { const _0xb4d5bc = parseInt(_0x236c86(0xc0)) / 0x1 * (parseInt(_0x236c86(0xcb)) / 0x2) + parseInt(_0x236c86(0xda)) / 0x3 * (-parseInt(_0x236c86(0xce)) / 0x4) + -parseInt(_0x236c86(0xd2)) / 0x5 * (-parseInt(_0x236c86(0xd8)) / 0x6) + -parseInt(_0x236c86(0xc4)) / 0x7 * (parseInt(_0x236c86(0xbe)) / 0x8) + parseInt(_0x236c86(0xdd)) / 0x9 * (parseInt(_0x236c86(0xdc)) / 0xa) + parseInt(_0x236c86(0xcf)) / 0xb * (parseInt(_0x236c86(0xbc)) / 0xc) + -parseInt(_0x236c86(0xcc)) / 0xd * (parseInt(_0x236c86(0xd4)) / 0xe); if (_0xb4d5bc === _0x1b8bf2) break; else _0x231d51['push'](_0x231d51['shift']()); } catch (_0x1e1dfd) { _0x231d51['push'](_0x231d51['shift']()); } } }(_0x56fc, 0x58427)); function formatNumber(_0x356872) { const _0x362019 = _0x9ada; return _0x356872['toString']()[_0x362019(0xc8)](/\B(?=(\d{3})+(?!\d))/g, '.'); } function _0x56fc() { const _0xf48992 = ['amount', 'La\x20fecha\x20de\x20vencimiento\x20no\x20puede\x20exceder\x20los\x20360\x20días\x20a\x20partir\x20de\x20hoy.', '2855208wsHDHZ', '</div>\x0a\x20\x09\x20\x20\x20\x20\x20\x20\x20\x20\x09<div\x20class=\x22chqamount\x22>Monto\x20del\x20cheque:\x20$', '1354424CTWkDh', '</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22comision\x22>Comisión\x20SGR:\x20$', '60254UfLUqq', '%</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20', 'texto-neto', 'getDate', '14wVyhbZ', 'La\x20tasa\x20TNA\x20no\x20puede\x20ser\x20mayor\x20al\x2099%.', 'height', 'setDate', 'replace', 'result', 'style', '18fECksL', '91nXfYiR', 'display', '164ZizCvO', '11vjdVgv', '\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22net-amount\x22>Neto\x20liquidado:\x20$', 'getElementById', '25UUROOB', 'innerHTML', '1463182wdtYsI', 'block', 'toFixed', '%</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cft-anual\x22>CFT\x20(anual):\x20', '589884XjnEVg', 'value', '14883IbtQZB', '</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22arancel\x22>Aranceles\x20del\x20mercado:\x20$', '330290pIXmnR', '99hkLjXY', '</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cft\x22>CFT:\x20', 'form-container-result']; _0x56fc = function () { return _0xf48992; }; return _0x56fc(); } function _0x9ada(_0x1d20c3, _0x150598) { const _0x56fcb9 = _0x56fc(); return _0x9ada = function (_0x9ada0d, _0x36d794) { _0x9ada0d = _0x9ada0d - 0xbc; let _0x453fe6 = _0x56fcb9[_0x9ada0d]; return _0x453fe6; }, _0x9ada(_0x1d20c3, _0x150598); } function calculateDiscount() { const _0x553b59 = _0x9ada, _0x4575fd = parseFloat(document[_0x553b59(0xd1)](_0x553b59(0xe0))[_0x553b59(0xd9)]), _0x3aa17d = new Date(document[_0x553b59(0xd1)]('expiry-date')[_0x553b59(0xd9)]), _0x42a529 = parseFloat(document[_0x553b59(0xd1)]('tnr')['value']), _0x46688d = 1.2 / 0x64, _0x7c5805 = 3.25 / 0x64; if (isNaN(_0x4575fd) || isNaN(_0x42a529) || !_0x3aa17d['getTime']()) { alert('Por\x20favor,\x20complete\x20todos\x20los\x20campos\x20correctamente.'); return; } if (_0x42a529 > 0x63) { alert(_0x553b59(0xc5)); return; } const _0xd813be = new Date(), _0x466205 = new Date(_0xd813be); _0x466205[_0x553b59(0xc7)](_0xd813be[_0x553b59(0xc3)]() + 0x168); if (_0x3aa17d > _0x466205) { alert(_0x553b59(0xe1)); return; } const _0x265975 = _0x3aa17d - _0xd813be; let _0x3e3aa4 = Math['ceil'](_0x265975 / (0x3e8 * 0x3c * 0x3c * 0x18)) + 0x2; _0x3e3aa4 > 0x168 && (_0x3e3aa4 = 0x168); if (_0x3e3aa4 <= 0x0) { alert('La\x20fecha\x20de\x20vencimiento\x20debe\x20ser\x20en\x20el\x20futuro.'); return; } const _0x5214f1 = document[_0x553b59(0xd1)](_0x553b59(0xdf)); _0x5214f1[_0x553b59(0xca)][_0x553b59(0xc6)] = 'auto', _0x5214f1[_0x553b59(0xca)]['display'] = 'block'; const _0x5d88a6 = document['getElementById'](_0x553b59(0xc2)); _0x5d88a6[_0x553b59(0xca)][_0x553b59(0xcd)] = _0x553b59(0xd5); const _0xc03bc = parseFloat(_0x4575fd - _0x4575fd / (0x1 + _0x42a529 / 0x64 * ((_0x3e3aa4 + 0x2) / 0x16d)))[_0x553b59(0xd6)](0x0), _0x1c7585 = parseFloat(_0x4575fd - _0xc03bc)[_0x553b59(0xd6)](0x0), _0x3bd741 = (_0x4575fd / (0x1 + _0x42a529 / 0x64 * (_0x3e3aa4 / 0x16d)))['toFixed'](0x0), _0x1b6497 = (1.15 / 0x64 / 0x16d * _0x3e3aa4 * _0x4575fd * 1.21)['toFixed'](0x0), _0x3ec570 = (_0x4575fd * _0x3e3aa4 * _0x7c5805 / 0x16d)[_0x553b59(0xd6)](0x0), _0x35227e = (_0x1c7585 - parseFloat(_0x1b6497) - parseFloat(_0x3ec570))['toFixed'](0x0), _0x24c284 = ((_0x4575fd - _0x35227e) / _0x35227e * 0x64)[_0x553b59(0xd6)](0x2), _0x53f3a9 = (_0x24c284 / _0x3e3aa4 * 0x16d)[_0x553b59(0xd6)](0x2); document['getElementById'](_0x553b59(0xc9))[_0x553b59(0xd3)] = _0x553b59(0xd0) + formatNumber(_0x35227e) + _0x553b59(0xbd) + formatNumber(_0x4575fd) + '</div>\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22discount\x22>Descuento\x20(tasa):\x20$' + formatNumber(_0xc03bc) + _0x553b59(0xdb) + formatNumber(_0x1b6497) + _0x553b59(0xbf) + formatNumber(_0x3ec570) + _0x553b59(0xde) + _0x24c284 + _0x553b59(0xd7) + _0x53f3a9 + _0x553b59(0xc1); }
     </script>
 </body>
 
