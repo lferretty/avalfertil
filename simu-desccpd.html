@@ -241,8 +241,22 @@
                 background-size: cover;
                 background-attachment: fixed;
                 z-index: -1;
+                animation: fondo 240s linear infinite;
             }
 
+            @keyframes fondo {
+                0% {
+                    scale: 1.5;
+                }
+
+                50% {
+                    scale: 1;
+                }
+
+                100% {
+                    scale: 1.5;
+                }
+            }
 
             #avfe-logo,
             #mav-logo {

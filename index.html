@@ -14,27 +14,38 @@
             padding: 0;
         }
 
+        .background{
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
     main {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
-        height: 70vh;
+        height: 80%;
+        margin-bottom: 200px;
+        
     }
 
     body {
         margin: 0;
-        padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         background-color: #ebebeb;
         color: #e0e0e0;
         font-family: "Roboto", Arial, sans-serif;
         font-weight: 500;
         font-size: 16px;
    
-         height: 100vh;
+         height: 80%;
     }
 
   
@@ -52,12 +63,6 @@
         width: 200px;
         filter: drop-shadow(1px 1px 5px rgba(255, 255, 255, 0.824));
     }
-
-/*     #mav-logo {
-        width: 150px;
-        height: 25px;
-     
-    } */
 
     h1,
     h2 {
@@ -136,6 +141,39 @@
         background-repeat: no-repeat;
         }
 
+        .wallpaper {
+                background-image: url(assets/pexels-pixabay-158827.jpg);
+                background-position: bottom;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                position: fixed;
+                /* Fija el fondo */
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-attachment: fixed;
+                z-index: -1;
+                animation: fondo 240s linear infinite;
+            }
+
+            @keyframes fondo {
+                0% {
+                    scale: 1.5;
+                }
+
+                50% {
+                    scale: 1;
+                }
+
+                100% {
+                    scale: 1.5;
+                }
+            }
+
+
         #avfe-logo,
         #mav-logo {
             scale: 1.4;
@@ -161,6 +199,12 @@
 
 <body>
     
+   <!--  <div class="background">
+        <video src="assets/pasto.mp4" autoplay muted loop></video>
+    </div> -->
+
+    <div class="wallpaper"></div>
+
     <main>
         
         <div class="logo-container">
