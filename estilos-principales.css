@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebebeb;
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+
+
+  /* ESTILOS PARA IMPRESIÓN  */
+
+  @media print {
+
+    body {
+        background-color: white;
+    }
+
+    .btn {
+        display: none;
+
+    }
+
+    .form-group label,
+    .net-amount,
+    input::placeholder {
+        color: black;
+    }
+
+    #home-link,  #consultaBCRA {
+        display: none;
+    }
+
+   
+
+}
