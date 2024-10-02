@@ -1,0 +1,345 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebebeb;
+    color: #e0e0e0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    height: 100vh;
+
+}
+
+header {
+    max-width: 600px;
+   /*  margin-top: 30px; */
+}
+
+
+.logo-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo-container img {
+    filter: drop-shadow(1px 1px 2px rgba(255, 255, 255, 0.824));
+}
+
+#avfe-logo {
+    width: 100px;
+    height: 50px;
+}
+
+#mav-logo {
+    width: 150px;
+    height: 25px;
+}
+
+h1 {
+    color: black;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.form-container {
+    background: #333333;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+    margin: 0 10px;
+    position: relative;
+}
+
+#form-container-result {
+    padding: 0 20px;
+    height: 0;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #8cd068;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    background: #444444;
+    border: 1px solid #555555;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+
+input::placeholder {
+    color: #dad8d8;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.result div {
+    margin-bottom: 10px;
+}
+
+.chqamount,
+.comision,
+.arancel,
+.discount,
+.net-amount-en-USD {
+    color: #7cc37a;
+}
+
+.cft-anual,
+.cft {
+    color: #d5e8de;
+}
+
+.net-amount {
+    color: #ffffff;
+    background-color: #8b0000;
+    padding: 10px 0;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: #027d1a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    position: relative;
+    width: 75%;
+
+}
+
+.btn:hover {
+    background-color: #125002;
+}
+
+footer {
+    width: 90%;
+    height: 50px;
+    max-width: 800px;
+    color: black;
+    text-align: center;
+    font-size: 80%;
+    padding: 20px 0;
+
+
+}
+
+footer p a {
+    color: #363ca1;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 50px 0;
+}
+
+.btn-chq {
+    margin-top: 30px;
+     background-color: darkblue; 
+
+   color: white;
+}
+
+.btn-chq:hover {
+    background-color: rgb(11, 11, 63);
+}
+
+footer a {
+    color: #004080;
+    text-decoration: none;
+}
+
+#refreshButton {
+    display: none;
+    margin: 10px auto;
+    position: relative;
+}
+
+
+
+#consultaBCRA {
+    color: rgb(207, 213, 214);
+    text-decoration: none;
+    text-transform: uppercase;
+  
+        font-size: 12px;
+    
+
+    margin: 20px auto ;
+    display: block;
+    background-color: #114b85;
+    width: 50%;
+    padding: 5px 0;
+}
+
+
+
+
+
+.texto-neto {
+    margin: 20px 0;
+    font-size: 12px;
+    color: white;
+    display: none;
+}
+
+.result {
+    margin-top: 20px;
+    height: auto;
+    text-align: center;
+}
+
+
+
+
+#home-link {
+    text-decoration: none;
+    margin: 20px auto;
+    padding: 2px;
+    text-align: center;
+    display: block;
+    color: black;
+    font-weight: 900;
+    font-size: 12px;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.689);
+}
+
+#home-link:hover {
+    color: rgb(11, 78, 129);
+}
+
+/* ESTILOS PARA VIEWPORTS TABLETS O MAYOR*/
+@media screen and (min-width:768px) {
+    .wallpaper {
+        background-image: url(assets/pexels-pixabay-158827.jpg);
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        position: fixed;
+        /* Fija el fondo */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: -1;
+        animation: fondo 240s linear infinite;
+    }
+
+    @keyframes fondo {
+        0% {
+            scale: 1.5;
+        }
+
+        50% {
+            scale: 1;
+        }
+
+        100% {
+            scale: 1.5;
+        }
+    }
+
+    #avfe-logo,
+    #mav-logo {
+        scale: 1.4;
+        margin: 20px;
+    }
+
+    #form-container-result {
+        display: none;
+        height: 200px;
+    }
+
+    main {
+        flex-direction: row;
+    }
+
+    #refreshButton {
+        left: 38%;
+        bottom: 10px;
+        position: absolute;
+    }
+
+
+    .logo-container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 600px;
+    }
+
+    footer {
+        color: white;
+    }
+
+    footer p a {
+        color: lightskyblue;
+    }
+
+
+
+
+    #consultaBCRA:hover {
+        background-color: rgb(10, 79, 79);
+
+    }
+
+    #disclaimer {
+        color: lightgray;
+        font-weight: light;
+        background-color: black;
+        position: relative;
+        bottom: -30px;
+        margin: auto;
+        width: 80%;
+    }
+
+    #disclaimer a {
+        color: #92b0d4;
+    }
+
+    .btn-chq ,  #home-link{
+        color: lightgray;
+    }
+
+}

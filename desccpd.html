@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Cheques (simulador)</title>
+    <link rel="shortcut icon" href="assets/calculator-fill.svg" type="image/x-icon">
+    <link rel="stylesheet" href="desccpd.css">
+</head>
+
+<body>
+    <div class="wallpaper"></div>
+    <header>
+        <div class="logo-container">
+            <a href="https://avalfertil.com.ar/" target="_blank">
+                <img src="https://avalfertil.com.ar/wp-content/uploads/2016/11/LOGOS-02-1.png" alt=""
+                    id="avfe-logo"></a>
+            <a href="https://www.mav-sa.com.ar/" target="_blank">
+                <img src="https://www.mav-sa.com.ar/fileadmin/templates/img/main-logo.png" alt="" id="mav-logo">
+            </a>
+        </div>
+        <h1>Simulador descuento de cheques </h1>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="amount">Monto del Cheque</label>
+                <input type="number" id="amount" placeholder="Ingrese el monto a descontar" required>
+            </div>
+            <div class="form-group">
+                <label for="expiry-date">Fecha de Vencimiento</label>
+                <input type="date" id="expiry-date" required>
+            </div>
+            <div class="form-group">
+                <label for="tnr">TNA (tasa de mercado)</label>
+                <input type="number" id="tnr" step="0.01" placeholder="Ingrese la tasa informada por la SGR" required>
+            </div>
+            <button class="btn" onclick="calculateDiscount()">CALCULAR</button>
+        </div>
+        <div class="form-container" id="form-container-result">
+            <div class="result" id="result"></div>
+            <div class="texto-neto" id="texto-neto">El "neto liquidado" incluye todos los gastos.</div>
+        </div>
+
+    </main>
+    <footer>
+        <a href="descpagare.html" class="btn btn-pag">Ir al Simulador de Pagarés</a>
+        <br>
+        <p id="disclaimer"> <a href="https://avalfertil.com.ar/" target="_blank">Aval Fértil SGR</a>. Simulador con
+            fines comerciales,
+            no implica obligación contractual. <a href="mailto:info@avalfertil.com.ar"
+                target="_blank">info@avalfertil.com.ar</a></p>
+    </footer>
+    <script src="desccpd.js"> </script>
+</body>
+
+</html>
